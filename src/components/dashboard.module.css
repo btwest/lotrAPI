@@ -1,0 +1,12 @@
+.dashboard {
+  display: grid;
+  place-items: center;
+  /*overflow: scroll;*/
+  overflow: auto;
+  color: white;
+  z-index: 50;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex: 1;
+}
