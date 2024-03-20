@@ -1,20 +1,30 @@
 import React from "react";
 import styles from "./options.module.css";
 
-export default function Options() {
+export default function Options(props) {
+  const { selection, setSelection } = props;
   const questions = ["character", "movie", "book"];
+
+  console.log("SELECTION VALUE: ", selection);
 
   //the-one-api.dev/v2
   https: return (
-    <div>
-      <h1>LOTR INFO</h1>
+    <>
       {questions.map((question, index) => {
         return (
-          <button className={styles.button} key={index}>
+          <button
+            onClick={setSelection(question)}
+            className={`${styles.button} ${
+              question === selection
+                ? styles.selectedButton
+                : styles.nonSelectedButton
+            }`}
+            key={index}
+          >
             {question}
           </button>
         );
       })}
-    </div>
+    </>
   );
 }
