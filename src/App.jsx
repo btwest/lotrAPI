@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>this is the header</header>
+      {/*<header>this is the header</header>*/}
       <main>
         <img
           src="https://artistmonkeys.com/wp-content/uploads/2021/11/Minas-Tirith-Gondor-beautiful-landscape-2-scaled.jpg"

@@ -5,6 +5,7 @@ import useFetchData from "../hooks/useFetchData";
 import Characters from "./Characters";
 import Books from "./Books";
 import Movies from "./Movies";
+import Loader from "./Loader";
 
 export default function Dashboard() {
   const [selection, setSelection] = useState(null);
@@ -19,16 +20,17 @@ export default function Dashboard() {
   }
 
   const dataRender = {
-    character: <Characters />,
-    book: <Books />,
-    movie: <Movies />,
+    character: <Characters data={data} />,
+    book: <Books data={data} />,
+    movie: <Movies data={data} />,
   };
 
   return (
     <div className={styles.dashboard}>
-      <div>
-        <h1>LOTR INFO</h1>
+      <div className={styles.layout}>
+        <h1 style={{ margin: "0 auto" }}>LOTR INFO</h1>
         <Options selection={selection} setSelection={onClickHandler} />
+        {loading && <Loader />}
         {data && !loading && dataRender[selection]}
       </div>
     </div>

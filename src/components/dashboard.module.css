@@ -1,12 +1,19 @@
 .dashboard {
   display: grid;
   place-items: center;
-  /*overflow: scroll;*/
-  overflow: auto;
+  overflow: scroll;
   color: white;
   z-index: 50;
   position: relative;
-  width: 100vw;
-  height: 100vh;
+
   flex: 1;
+  max-height: 100vh;
+  padding: 10px;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 100%;
 }

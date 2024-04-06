@@ -9,7 +9,7 @@ export default function Options(props) {
 
   //the-one-api.dev/v2
   https: return (
-    <>
+    <div className={styles.buttonContainer}>
       {questions.map((question, index) => {
         return (
           <button
@@ -25,6 +25,6 @@ export default function Options(props) {
           </button>
         );
       })}
-    </>
+    </div>
   );
 }
