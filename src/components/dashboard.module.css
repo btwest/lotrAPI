@@ -1,7 +1,7 @@
 .dashboard {
   display: grid;
   place-items: center;
-  overflow: scroll;
+  overflow: hidden;
   color: white;
   z-index: 50;
   position: relative;
